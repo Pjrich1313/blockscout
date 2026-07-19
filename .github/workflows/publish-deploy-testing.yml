@@ -6,6 +6,9 @@ on:
   # push:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 env:
   K8S_LOCAL_PORT: ${{ secrets.K8S_LOCAL_PORT }}
   K8S_HOST: ${{ secrets.K8S_HOST }}

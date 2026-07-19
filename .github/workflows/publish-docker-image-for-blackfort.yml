@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - production-blackfort
+permissions:
+  contents: read
+
 env:
   OTP_VERSION: ${{ vars.OTP_VERSION }}
   ELIXIR_VERSION: ${{ vars.ELIXIR_VERSION }}
