@@ -8,6 +8,9 @@ on:
       - 'CHANGELOG.md'
       - '**/README.md'
       - 'docker-compose/*'
+permissions:
+  contents: read
+
 env:
   OTP_VERSION: ${{ vars.OTP_VERSION }}
   ELIXIR_VERSION: ${{ vars.ELIXIR_VERSION }}
@@ -112,7 +115,8 @@ jobs:
   deploy_e2e:
     needs: push_to_registry
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      id-token: write
     steps:
       - name: Get Vault credentials
         id: retrieve-vault-secrets

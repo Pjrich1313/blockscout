@@ -9,6 +9,9 @@ on:
       - 'CHANGELOG.md'
       - '**/README.md'
       - 'docker-compose/*'
+permissions:
+  contents: read
+
 env:
   OTP_VERSION: ${{ vars.OTP_VERSION }}
   ELIXIR_VERSION: ${{ vars.ELIXIR_VERSION }}

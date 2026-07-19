@@ -30,6 +30,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read
+
 env:
   MIX_ENV: test
   OTP_VERSION: ${{ github.ref_name == '10284/merge' && '27.1' || vars.OTP_VERSION }}
